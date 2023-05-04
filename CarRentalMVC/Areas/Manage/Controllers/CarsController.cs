@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
+﻿using CarRentalMVC.Abstraction;
 using CarRentalMVC.DAL;
 using CarRentalMVC.Models;
+using CarRentalMVC.Repository;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace CarRentalMVC.Areas.Manage.Controllers
 {
@@ -14,30 +11,29 @@ namespace CarRentalMVC.Areas.Manage.Controllers
     public class CarsController : Controller
     {
         private readonly AppDbContext _context;
+        IBaseRepository<Car> _db;
 
-        public CarsController(AppDbContext context)
+        public CarsController(AppDbContext context, IBaseRepository<Car> db)
         {
             _context = context;
+            _db = db;
         }
 
         // GET: Manage/Cars
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
-              return _context.Cars != null ? 
-                          View(await _context.Cars.ToListAsync()) :
-                          Problem("Entity set 'AppDbContext.Cars'  is null.");
+            //return _context.Cars != null ? 
+            //            View(await _context.Cars.ToListAsync()) :
+            //            Problem("Entity set 'AppDbContext.Cars'  is null.");
+
+            return View(_db.GetList());
         }
 
         // GET: Manage/Cars/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public IActionResult Details(int id)
         {
-            if (id == null || _context.Cars == null)
-            {
-                return NotFound();
-            }
 
-            var car = await _context.Cars
-                .FirstOrDefaultAsync(m => m.id == id);
+            var car = _db.Get(id);
             if (car == null)
             {
                 return NotFound();
@@ -52,31 +48,22 @@ namespace CarRentalMVC.Areas.Manage.Controllers
             return View();
         }
 
-        // POST: Manage/Cars/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("id,brand,model,year,color,number,price,isActive")] Car car)
+        public IActionResult Create([Bind("id,brand,model,year,color,number,price,isActive")] Car car)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(car);
-                await _context.SaveChangesAsync();
+                _db.Create(car);
                 return RedirectToAction(nameof(Index));
             }
             return View(car);
         }
 
         // GET: Manage/Cars/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        public IActionResult Edit(int id)
         {
-            if (id == null || _context.Cars == null)
-            {
-                return NotFound();
-            }
 
-            var car = await _context.Cars.FindAsync(id);
+            var car = _db.Get(id);
             if (car == null)
             {
                 return NotFound();
@@ -84,13 +71,9 @@ namespace CarRentalMVC.Areas.Manage.Controllers
             return View(car);
         }
 
-        // POST: Manage/Cars/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("id,brand,model,year,color,number,price,isActive")] Car car)
-        {  
+        public IActionResult Edit(int id, [Bind("id,brand,model,year,color,number,price,isActive")] Car car)
+        {
             if (id != car.id)
             {
                 return NotFound();
@@ -98,20 +81,23 @@ namespace CarRentalMVC.Areas.Manage.Controllers
 
             if (ModelState.IsValid)
             {
-                try
+                var res = _db.Get(id);
+                if (res != null)
                 {
-                    _context.Update(car);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!CarExists(car.id))
+                    try
                     {
-                        return NotFound();
+                        _db.Update(res);
                     }
-                    else
+                    catch (DbUpdateConcurrencyException)
                     {
-                        throw;
+                        if (!CarExists(car.id))
+                        {
+                            return NotFound();
+                        }
+                        else
+                        {
+                            throw;
+                        }
                     }
                 }
                 return RedirectToAction(nameof(Index));
@@ -120,45 +106,38 @@ namespace CarRentalMVC.Areas.Manage.Controllers
         }
 
         // GET: Manage/Cars/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        public IActionResult Delete(int id)
         {
-            if (id == null || _context.Cars == null)
+            
+            if (CarExists(id) == null)
             {
                 return NotFound();
             }
+            _db.Delete(id);
 
-            var car = await _context.Cars
-                .FirstOrDefaultAsync(m => m.id == id);
-            if (car == null)
-            {
-                return NotFound();
-            }
-
-            return View(car);
+            return View(nameof(Index));
         }
 
         // POST: Manage/Cars/Delete/5
         [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        public IActionResult DeleteConfirmed(int id)
         {
             if (_context.Cars == null)
             {
                 return Problem("Entity set 'AppDbContext.Cars'  is null.");
             }
-            var car = await _context.Cars.FindAsync(id);
+            var car =_db.Get(id);
             if (car != null)
             {
                 _context.Cars.Remove(car);
             }
-            
-            await _context.SaveChangesAsync();
+
             return RedirectToAction(nameof(Index));
         }
 
         private bool CarExists(int id)
         {
-          return (_context.Cars?.Any(e => e.id == id)).GetValueOrDefault();
+            return _db.GetList().Any(x => x.id == id);
         }
     }
 }

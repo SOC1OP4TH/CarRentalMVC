@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\c#\\CarRentalMVC\\CarRentalMVC\\CarRentalMVC.csproj": {}
+    "E:\\NamiqSerbestIs\\CarRentalMVC\\CarRentalMVC\\CarRentalMVC.csproj": {}
   },
   "projects": {
-    "D:\\c#\\CarRentalMVC\\CarRentalMVC\\CarRentalMVC.csproj": {
+    "E:\\NamiqSerbestIs\\CarRentalMVC\\CarRentalMVC\\CarRentalMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\c#\\CarRentalMVC\\CarRentalMVC\\CarRentalMVC.csproj",
+        "projectUniqueName": "E:\\NamiqSerbestIs\\CarRentalMVC\\CarRentalMVC\\CarRentalMVC.csproj",
         "projectName": "CarRentalMVC",
-        "projectPath": "D:\\c#\\CarRentalMVC\\CarRentalMVC\\CarRentalMVC.csproj",
-        "packagesPath": "C:\\Users\\Shesm\\.nuget\\packages\\",
-        "outputPath": "D:\\c#\\CarRentalMVC\\CarRentalMVC\\obj\\",
+        "projectPath": "E:\\NamiqSerbestIs\\CarRentalMVC\\CarRentalMVC\\CarRentalMVC.csproj",
+        "packagesPath": "C:\\Users\\Tural\\.nuget\\packages\\",
+        "outputPath": "E:\\NamiqSerbestIs\\CarRentalMVC\\CarRentalMVC\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "D:\\visual\\Yeni klasör\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Shesm\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Tural\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -47,29 +42,17 @@
           "dependencies": {
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[6.0.15, )"
-            },
-            "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[8.0.0-preview.3.23174.2, )"
+              "version": "[6.0.16, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[6.0.15, )"
+              "version": "[6.0.16, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.0-preview.3.23174.2, )"
-            },
-            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
-              "target": "Package",
-              "version": "[6.0.13, )"
-            },
-            "Pomelo.EntityFrameworkCore.MySql": {
-              "target": "Package",
-              "version": "[7.0.0, )"
+              "version": "[6.0.16, )"
             }
           },
           "imports": [
@@ -91,7 +74,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

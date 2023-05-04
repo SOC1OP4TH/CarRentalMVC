@@ -1,8 +1,7 @@
-﻿using CarRentalMVC.ViewModel.User;
-using CarRentalMVC.Models;
-
-using Microsoft.AspNetCore.Mvc;
+﻿using CarRentalMVC.Models;
+using CarRentalMVC.ViewModel.User;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 
 namespace CarRentalMVC.Controllers
 {
@@ -20,7 +19,7 @@ namespace CarRentalMVC.Controllers
 
 
 
-        public IActionResult Register() 
+        public IActionResult Register()
         {
             return View();
         }
@@ -55,16 +54,13 @@ namespace CarRentalMVC.Controllers
                     drivingLicense = vm.RegisterVM.drivingLicense,
                     city = vm.RegisterVM.city
 
-
-
-
                 };
                 var result = await _userManager.CreateAsync(customer, vm.RegisterVM.password);
                 if (!result.Succeeded)
                 {
-                
-                        ModelState.AddModelError("", "Mail already exist");
-                    
+
+                    ModelState.AddModelError("RegisterVM.password", "Mail already exist");
+
 
                     return View();
                 }
@@ -74,7 +70,7 @@ namespace CarRentalMVC.Controllers
                 return RedirectToAction();
 
             }
-            else if(vm.LoginVM != null)
+            else if (vm.LoginVM != null)
             {
                 Customer existUser = await _userManager.FindByEmailAsync(vm.LoginVM.email);
                 if (existUser == null)
@@ -87,28 +83,23 @@ namespace CarRentalMVC.Controllers
                 var result = await _signInManager.PasswordSignInAsync(existUser, vm.LoginVM.password, true, true);
                 if (!result.Succeeded)
                 {
-                   
-                        ModelState.AddModelError("", "Mail or password incorrect");
-                    
+
+                    ModelState.AddModelError("LoginVM.password", "Mail or password incorrect");
+
 
                     return View();
                 }
-           return  RedirectToAction("Index");
+                return RedirectToAction("Index");
 
             }
-            else
-            { return View(); }  
-           
-
-             
-
+            return View(); 
         }
-            
-            
 
 
-        }
+
 
     }
+
+}
 
 

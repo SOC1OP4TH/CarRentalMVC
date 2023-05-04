@@ -5,89 +5,88 @@ build_property.UsingMicrosoftNETSdkWeb = true
 build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = 
 build_property.PlatformNeutralAssembly = 
-build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = CarRentalMVC
 build_property.RootNamespace = CarRentalMVC
-build_property.ProjectDir = D:\c#\CarRentalMVC\CarRentalMVC\
+build_property.ProjectDir = E:\NamiqSerbestIs\CarRentalMVC\CarRentalMVC\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\c#\CarRentalMVC\CarRentalMVC
+build_property.MSBuildProjectDirectory = E:\NamiqSerbestIs\CarRentalMVC\CarRentalMVC
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/c\#/CarRentalMVC/CarRentalMVC/Areas/Manage/Views/AdminHome/Index.cshtml]
+[E:/NamiqSerbestIs/CarRentalMVC/CarRentalMVC/Areas/Manage/Views/AdminHome/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXEFkbWluSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/c\#/CarRentalMVC/CarRentalMVC/Areas/Manage/Views/AdminHome/Login.cshtml]
+[E:/NamiqSerbestIs/CarRentalMVC/CarRentalMVC/Areas/Manage/Views/AdminHome/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXEFkbWluSG9tZVxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/c\#/CarRentalMVC/CarRentalMVC/Areas/Manage/Views/Cars/Create.cshtml]
+[E:/NamiqSerbestIs/CarRentalMVC/CarRentalMVC/Areas/Manage/Views/Cars/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXENhcnNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/c\#/CarRentalMVC/CarRentalMVC/Areas/Manage/Views/Cars/Delete.cshtml]
+[E:/NamiqSerbestIs/CarRentalMVC/CarRentalMVC/Areas/Manage/Views/Cars/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXENhcnNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/c\#/CarRentalMVC/CarRentalMVC/Areas/Manage/Views/Cars/Details.cshtml]
+[E:/NamiqSerbestIs/CarRentalMVC/CarRentalMVC/Areas/Manage/Views/Cars/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXENhcnNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/c\#/CarRentalMVC/CarRentalMVC/Areas/Manage/Views/Cars/Edit.cshtml]
+[E:/NamiqSerbestIs/CarRentalMVC/CarRentalMVC/Areas/Manage/Views/Cars/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXENhcnNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/c\#/CarRentalMVC/CarRentalMVC/Areas/Manage/Views/Cars/Index.cshtml]
+[E:/NamiqSerbestIs/CarRentalMVC/CarRentalMVC/Areas/Manage/Views/Cars/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXENhcnNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/c\#/CarRentalMVC/CarRentalMVC/Areas/Manage/Views/_ViewImports.cshtml]
+[E:/NamiqSerbestIs/CarRentalMVC/CarRentalMVC/Areas/Manage/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXF9WaWV3SW1wb3J0cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/c\#/CarRentalMVC/CarRentalMVC/Areas/Manage/Views/_ViewStart.cshtml]
+[E:/NamiqSerbestIs/CarRentalMVC/CarRentalMVC/Areas/Manage/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXF9WaWV3U3RhcnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/c\#/CarRentalMVC/CarRentalMVC/Views/Account/Login.cshtml]
+[E:/NamiqSerbestIs/CarRentalMVC/CarRentalMVC/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/c\#/CarRentalMVC/CarRentalMVC/Views/Account/Register.cshtml]
+[E:/NamiqSerbestIs/CarRentalMVC/CarRentalMVC/Views/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/c\#/CarRentalMVC/CarRentalMVC/Views/Home/Index.cshtml]
+[E:/NamiqSerbestIs/CarRentalMVC/CarRentalMVC/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/c\#/CarRentalMVC/CarRentalMVC/Views/Home/Privacy.cshtml]
+[E:/NamiqSerbestIs/CarRentalMVC/CarRentalMVC/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/c\#/CarRentalMVC/CarRentalMVC/Views/Shared/Error.cshtml]
+[E:/NamiqSerbestIs/CarRentalMVC/CarRentalMVC/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/c\#/CarRentalMVC/CarRentalMVC/Views/Shared/_ValidationScriptsPartial.cshtml]
+[E:/NamiqSerbestIs/CarRentalMVC/CarRentalMVC/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/c\#/CarRentalMVC/CarRentalMVC/Views/_ViewImports.cshtml]
+[E:/NamiqSerbestIs/CarRentalMVC/CarRentalMVC/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/c\#/CarRentalMVC/CarRentalMVC/Views/_ViewStart.cshtml]
+[E:/NamiqSerbestIs/CarRentalMVC/CarRentalMVC/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/c\#/CarRentalMVC/CarRentalMVC/Areas/Manage/Views/Shared/_Layout.cshtml]
+[E:/NamiqSerbestIs/CarRentalMVC/CarRentalMVC/Areas/Manage/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXFNoYXJlZFxfTGF5b3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = b-xzzc32831u
 
-[D:/c\#/CarRentalMVC/CarRentalMVC/Views/Shared/_Layout.cshtml]
+[E:/NamiqSerbestIs/CarRentalMVC/CarRentalMVC/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-o5d58q3lqp

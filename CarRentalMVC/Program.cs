@@ -1,5 +1,7 @@
-﻿using CarRentalMVC.DAL;
+﻿using CarRentalMVC.Abstraction;
+using CarRentalMVC.DAL;
 using CarRentalMVC.Models;
+using CarRentalMVC.Repository;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -8,11 +10,14 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddDbContext<AppDbContext>(options => options.UseMySql(
-    builder.Configuration.GetConnectionString("DefaultConnection"),
-    new MySqlServerVersion(new Version(8, 0, 23)) // do�ru ServerVersion degeri
+//builder.Services.AddDbContext<AppDbContext>(options => options.UseMySql(
+//    builder.Configuration.GetConnectionString("DefaultConnection"),
+//    new MySqlServerVersion(new Version(8, 0, 23)) // do�ru ServerVersion degeri
 
-));
+//));
+builder.Services.AddDbContext<AppDbContext>(opt => opt.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddScoped<IBaseRepository<Car>, BaseRepository<Car>>();
 
 builder.Services.AddIdentity<Customer, IdentityRole>(opt =>
 {
@@ -39,6 +44,7 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
+app.UseAuthentication();
 
 app.MapControllerRoute(
     name: "default",
